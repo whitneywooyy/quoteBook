@@ -1,12 +1,12 @@
 quoteBook
 =========
 
-### Learning Objectives
+###  
+Learning Objectives
   - understand the purpose of Services in Angular
   - know how to inject services into their controllers
   - know how to call methods on their services from in their controllers and put the response on $scope
-  - know the difference between factories and services 
-
+  - know the difference between factories and services
 
 
 ###Step 1: Set up your Structure
@@ -51,22 +51,22 @@ The whole point of this repo is to get used to having your main data originating
 Notice we didn't put our quotes array directly on 'this' or your object you're going to return. That's because we don't want this data to be directly accessed from outside of this service. Instead, we're going to create 'getter' and 'setter' methods in order to get, add to, or remove parts of the quotes array making the quotes array 'private' to this service.
 
 * Now that we have our data, let's set up ways to access that data.
-* Create three methods on your 'this' (service) or custom object (factory), one called getData, one called addData, and one called removeData
-* getData simply returns the quotes array
-* addData takes in a data object, verifies that data object has the proper keys (just text and author), then adds that object to the end of the quotes array
-* removeData takes in the text of a quote, loops through the quotes array, then removes the proper quote from the array. 
+* Create three methods on your 'this' (service) or custom object (factory), one called getData, one called addData, and one called removeData // DONE
+* getData simply returns the quotes array // DONE
+* addData takes in a data object, verifies that data object has the proper keys (just text and author), then adds that object to the end of the quotes array // DONE
+* removeData takes in the text of a quote, loops through the quotes array, then removes the proper quote from the array. // DONE
 
 Once you finish those methods, this service should be complete. Now notice how all the heavy logic is contained in this one service which we can inject into any controller we create. This makes things very modular and testable.
 
 ##Step 3: Add Data from your Service to your Controller and Display it
 Now that your service is set up, let's inject your service in to your controller then add that data to the scope of your controller, then display it in your view
-* Inject your dataService into your mainCtrl
-* Use the proper method on your dataService object to get the quotes array then add it to your $scope object in your mainCtrl
-* Once the quotes data is on your scope, use ng-repeat to loop over that data in  your index.html page and display it.
+* Inject your dataService into your mainCtrl // DONE
+* Use the proper method on your dataService object to get the quotes array then add it to your $scope object in your mainCtrl // DONE
+* Once the quotes data is on your scope, use ng-repeat to loop over that data in  your index.html page and display it. // DONE
 
 ##Step 4: Add Options to Filter, Add, and Remove Items from your Quotes Array
-* Create three buttons, Add Quote, Remove Quote, and Filter Quotes
-* Using ng-click and the methods we set up on our dataService object earlier, make those three buttons do the appropriate action.
+* Create three buttons, Add Quote, Remove Quote, and Filter Quotes // DONE
+* Using ng-click and the methods we set up on our dataService object earlier, make those three buttons do the appropriate action. // DONE
 * Once you've finished, add some ng-shows to 'toggle' the input boxes for add, remove, and filter making sure you only show one at a time.
 
 ##Step 5: Persist your Quotes as a cookie in your browser
