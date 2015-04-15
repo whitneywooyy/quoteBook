@@ -67,7 +67,7 @@ Now that your service is set up, let's inject your service in to your controller
 ##Step 4: Add Options to Filter, Add, and Remove Items from your Quotes Array
 * Create three buttons, Add Quote, Remove Quote, and Filter Quotes // DONE
 * Using ng-click and the methods we set up on our dataService object earlier, make those three buttons do the appropriate action. // DONE
-* Once you've finished, add some ng-shows to 'toggle' the input boxes for add, remove, and filter making sure you only show one at a time.
+* Once you've finished, add some ng-shows to 'toggle' the input boxes for add, remove, and filter making sure you only show one at a time.  // Able to show and hide each div but not simultaneously
 
 ##Step 5: Persist your Quotes as a cookie in your browser
 * Look up how to use $cookieStore and the $cookieStore API - https://docs.angularjs.org/api/ngCookies/service/$cookieStore

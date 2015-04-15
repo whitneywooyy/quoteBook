@@ -37,5 +37,8 @@ app.service('dataService', function(){
 		}
 		console.log("You have removed ", textInput);		
 	};
+	// this.addQuote = function(){
+	// 	if 
+	// };
 
 });	// end app.service

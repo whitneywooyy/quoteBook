@@ -4,20 +4,25 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body ng-controller="mainCtrl">
-		<h2>Add a Quote</h2>
-		<div>
+		<div class="button" ng-click="addQuote = !addQuote" ng-model="addQuoteBtn">Add Quote</div>
+		<div class="button" ng-click="removeQuote = !removeQuote" ng-model="removeQuoteBtn">Remove Quote</div>
+		<div class="button" ng-click="filterQuote = !filterQuote" ng-model="filterQuoteBtn">Filter Quote</div>
+		<!-- <div class="button" ng-click="addQuote()" ng-model="addQuoteBtn">Add Quote</div>
+		<div class="button" ng-click="removeQuote()" ng-model="removeQuoteBtn">Remove Quote</div>
+		<div class="button" ng-click="filterQuote()" ng-model="filterQuoteBtn">Filter Quote</div> -->
+		<div ng-show="addQuote">
+			<h3>Add a Quote</h3>
+			<input placeholder="Quote" ng-model="newQuote" />
+			<input placeholder="Author" ng-model="newAuthor" />
 			<button ng-click="addData()" ng-model="clicked">Add Quote</button>
-			<button ng-click="removeData()">Remove Quote</button>
-			<button ng-click="filterData()">Filter Quote</button>
 		</div>
-		<div>
-			<input placeholder="Quote" ng-model="newQuote" ng-show="clicked" />
-			<input placeholder="Author" ng-model="newAuthor" ng-show="clicked" />
-		</div>
-		<div ng-hide="clicked">
+		<div ng-show="removeQuote">
+			<h3>Remove a Quote</h3>
 			<input placeholder="Quote" ng-model="remQuote" />
+			<button ng-click="removeData()">Remove Quote</button>
 		</div>
-		<div ng-hide="clicked">
+		<div ng-show="filterQuote">
+			<h3>Search a Quote</h3>
 			<input placeholder="Search" ng-model="searchQuote" />
 		</div>
 		
