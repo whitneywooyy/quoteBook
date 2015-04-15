@@ -21,7 +21,7 @@ app.service('dataService', function(){
 			author: authorInput
 		};
 		if (!textInput || !authorInput) {
-			console.log("Sorry, you must enter both a quote and its author!");
+			alert("Sorry, you must enter both a quote and its author!");
 			return;
 		}
 		else {
@@ -33,9 +33,10 @@ app.service('dataService', function(){
 		for (var i = 0; i < quotes.length; i++) {
 			if (textInput === quotes[i].text) {
 				quotes.splice(i, 1);
+				console.log("You have removed ", textInput);
 			}
 		}
-		console.log("You have removed ", textInput);		
+		alert("That quote does not exist!");		
 	};
 	// this.addQuote = function(){
 	// 	if 
